@@ -1,4 +1,4 @@
-/* //question1.1 insert records
+//question1.1 insert records
 db.test.bios.insertMany([
 {
 	"_id": 20,
@@ -84,6 +84,6 @@ cursor=db.test.bios.aggregate([
 	{$match: { "contribs": {$in: contributions}}},
 	{$group: {_id: "$contribs", people: {$push: "$name"}}}
 ])
-cursor.forEach(printjson)*/
+cursor.forEach(printjson)
 //question 1.5 report the distinct organizations that gave awards
 db.test.bios.distinct("awards.by")
