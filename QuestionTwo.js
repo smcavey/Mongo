@@ -3,7 +3,7 @@ db.test.bios.mapReduce(
 function(){
 	if(this.awards!=null) // if there are awards
 		for(var i=0; i<this.awards.length; i++) // for each award
-			emit(this.awards[i].award, 1); // map <award:1>
+			emit(this.awards[i].award, 1) // map <award:1>
 },
 function(key, value){ // reduce by key
 	return Array.sum(value)
